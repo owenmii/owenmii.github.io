@@ -1,3 +1,6 @@
+/* =======================================
+   RÉINITIALISATION ET STYLES DE BASE
+======================================== */
 html {
     scroll-behavior: smooth;
 }
@@ -9,35 +12,152 @@ body {
     background-color: #f4f4f4;
     color: #333;
 }
+
+/* =======================================
+   STYLES DU HEADER
+======================================== */
 header {
     background: #003366;
     color: #fff;
     padding: 1rem 0;
     text-align: center;
+    position: relative;
 }
+
 header h1 {
+    font-size: 3em;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #003366;
+    padding: 20px;
     margin: 0;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    letter-spacing: 2px;
+    display: inline-block;
 }
+
+.infos-contact {
+    margin: 0; 
+    line-height: 1.2; 
+    text-align: center;
+}
+
+.securite {
+    display: block;
+    font-size: 0.9em;
+    color: #bebebe;
+}
+
+/* =======================================
+   STYLES DE LA NAVIGATION
+======================================== */
+nav {
+    margin-top: 20px;
+    border-top: 3px solid #ffffff;
+    padding-top: 10px;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
 }
+
 nav ul li {
     display: inline;
     margin-right: 15px;
 }
+
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    position: relative;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
+
+/* Effet de survol sur les liens de navigation */
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+nav ul li a:hover {
+    background-color: #0057b8;
+    transform: scale(1.05);
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* =======================================
+   STYLES DU CONTENU PRINCIPAL
+======================================== */
 main {
     padding: 20px;
 }
-/*
-main #liste ul li {
-    content: "✤";
+
+main #liste ul li::marker {
     color: #c40a0a;
-}*/
+}
+
+main #liste ul li {
+     list-style-type: "✤ ";
+}
+
+/* Mise en gras et colorisation pour les éléments de liste */
+ul li strong {
+    font-weight: bold;
+    color: #003366;
+}
+
+/* =======================================
+   STYLES DES SECTIONS (pour titre et bloc de contenu)
+======================================== */
+.section-container {
+    margin-bottom: 50px;
+    padding: 30px 20px;
+    background: linear-gradient(135deg, #e0f7fa, #ffffff);
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid #c2c2c2;
+}
+
+/* Titres principaux dans les sections */
+.titrePrincipaux {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    color: #003366;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+/* Effet de soulignement sur les titres principaux */
+.titrePrincipaux::after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    background-color: #0057b8;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* =======================================
+   STYLES DU FOOTER
+======================================== */
 footer {
     text-align: center;
     padding: 1rem 0;
