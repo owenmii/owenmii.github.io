@@ -33,10 +33,11 @@ nav ul li a {
 main {
     padding: 20px;
 }
+/*
 main #liste ul li {
     content: "✤";
     color: #c40a0a;
-}
+}*/
 footer {
     text-align: center;
     padding: 1rem 0;
